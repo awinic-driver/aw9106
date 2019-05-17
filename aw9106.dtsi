@@ -1,0 +1,18 @@
+&i2c3 {
+	aw9106_led@5b {
+        compatible = "awinic,aw9106_led";
+        reg = <0x5b>;
+        reset-gpio = <&pio 63 0>;
+        status = "okay";
+        aw9106,led {
+            aw9106,name = "aw9106_led";
+            aw9106,imax = <3>;
+            aw9106,brightness = <32>;
+            aw9106,max_brightness = <255>;
+            aw9106,rise_time = <2>;
+            aw9106,on_time = <2>;
+            aw9106,fall_time = <2>;
+            aw9106,off_time = <2>;
+        };
+    };
+};
